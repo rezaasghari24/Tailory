@@ -23,13 +23,15 @@ a {
 
 header {
   padding: 2rem 10rem;
-  background-color: #fef8f1; }
+  background-color: #fef8f1;
+  height: 70vh; }
 
 .menu-box {
   display: grid;
   grid-auto-flow: column;
   justify-items: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 2rem; }
 
 .hover-underline-animation {
   display: block;
@@ -77,3 +79,67 @@ header {
   .btn:hover {
     transform: scale(1.05);
     background-color: #ffcf99; }
+
+.hero-section {
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.315)), url("../img/hero section.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  border-radius: 1.5rem; }
+  .hero-section--box {
+    font-size: 2.3rem;
+    text-align: center;
+    margin-bottom: 2rem; }
+    .hero-section--box h1:first-child {
+      color: #fef8f1; }
+    .hero-section--box h1:last-child {
+      color: #ffcf99; }
+  .hero-section .heading-primary {
+    letter-spacing: .2rem; }
+  .hero-section--p {
+    width: 70rem;
+    text-align: center;
+    font-family: 300;
+    color: aliceblue;
+    font-size: 1.6rem;
+    margin-bottom: 2rem; }
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; }
+  .search-box span {
+    color: #fef8f1;
+    font-size: 1.2rem; }
+
+.search-bar {
+  display: flex;
+  background-color: white;
+  width: 45rem;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem; }
+  .search-bar input {
+    border-radius: 2rem;
+    padding: 2rem;
+    border: 0;
+    outline: none;
+    flex: 1;
+    background: transparent; }
+  .search-bar button {
+    width: 5rem;
+    height: 3.5rem;
+    border: 0;
+    outline: none;
+    background-color: #ed9a43;
+    color: rgba(0, 0, 0, 0.774);
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    margin-right: .3rem; }
