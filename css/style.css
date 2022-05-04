@@ -174,12 +174,13 @@ p {
     text-transform: uppercase;
     font-size: 1.4rem;
     text-align: center; }
-
-.img-box {
-  display: flex;
-  justify-content: space-between; }
-  .img-box img {
-    width: 15rem; }
+  .trusted__img-box {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; }
+    .trusted__img-box img {
+      width: 15rem; }
 
 .components {
   margin: 2rem 10rem 10rem; }
@@ -190,14 +191,14 @@ p {
 
 .card-box {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   margin-bottom: 2.5rem;
-  justify-items: center; }
+  justify-items: center;
+  grid-gap: 2rem; }
 
 .card {
   background-color: #ffffff;
   box-shadow: 0rem 0rem 2rem 0.1rem rgba(0, 0, 0, 0.1);
-  width: 35rem;
   border-radius: 2rem; }
   .card img {
     width: 100%;
@@ -220,7 +221,7 @@ p {
       margin-top: .5rem; }
   .card__p {
     text-align: left;
-    margin: 3rem 3rem; }
+    margin: 2rem; }
 
 .categories {
   margin-bottom: 5rem;
@@ -260,30 +261,36 @@ p {
   display: block; }
 
 .background {
-  height: 50vh;
   width: auto;
   background-size: cover;
   background-position: center;
   margin-bottom: 10rem; }
   .background img {
     background-size: cover;
-    background-position: center; }
+    background-position: center;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover; }
 
 .magic {
   margin: 0 10rem 10rem;
   text-align: center; }
   .magic__boxes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(33.5rem, 1fr));
     justify-content: center;
-    align-items: center; }
+    align-items: top;
+    grid-gap: 2rem; }
   .magic__box {
-    max-width: 50rem; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem; }
     .magic__box img {
-      width: 20rem; }
+      width: 30rem; }
   .magic__p {
-    font-size: 1.3rem;
-    margin-top: 2rem; }
+    font-size: 1.3rem; }
 
 .design {
   display: grid;
@@ -307,7 +314,7 @@ p {
       border: none;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1rem;
       justify-content: center; }
       .design__box--6 a {
         display: inline-block;

@@ -213,16 +213,20 @@ p {
         font-size: 1.4rem;
         text-align: center;
     }
-}
 
-.img-box {
-    display: flex;
-    justify-content: space-between;
-
-    & img {
-        width: 15rem;
+    &__img-box {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    
+        & img {
+            width: 15rem;
+        }
     }
 }
+
+
 
 .components {
     margin: 2rem 10rem 10rem;
@@ -234,14 +238,15 @@ p {
 }
 .card-box {
     display: grid;
-    grid-template-columns: repeat(3 , 1fr);
+    grid-template-columns: repeat(auto-fit , minmax(27rem , 1fr));
+    //grid-template-columns: repeat(3 , 1fr);
     margin-bottom: 2.5rem;
     justify-items: center;
+    grid-gap: 2rem;
 }
 .card {
     background-color: #ffffff;
     box-shadow: 0rem 0rem 2rem .1rem rgba(0, 0, 0, .1);
-    width: 35rem;
     border-radius: 2rem;
     & img {
         width: 100%;
@@ -274,7 +279,7 @@ p {
 
     &__p {
         text-align: left;
-        margin: 3rem 3rem;
+        margin: 2rem;
     }
 }
 
@@ -295,6 +300,7 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
 
     &__no {
@@ -322,8 +328,7 @@ p {
     display: block;
 }
 .background {
-    //background-image: url("../img/background.jpg");
-    height: 50vh;
+    
     width: auto;
     background-size: cover;
     background-position: center;
@@ -331,6 +336,9 @@ p {
     & img {
         background-size: cover;
         background-position: center;
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
     }
 }
 
@@ -340,22 +348,27 @@ p {
 
     &__boxes {
         display: grid;
-        grid-template-columns: repeat( 3 , 1fr);
+        grid-template-columns: repeat( auto-fit , minmax(33.5rem , 1fr));
+        //grid-template-columns: repeat( 3 , 1fr);
         justify-content: center;
-        align-items: center;
+        align-items: top;
+        grid-gap: 2rem;
     }
 
     &__box {
-        max-width: 50rem;
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
         & img {
-            width: 20rem;
+            width: 30rem;
         }
     }
 
     &__p {
         font-size: 1.3rem;
-        margin-top: 2rem;
+        //margin-top: 2rem;
     }
 }
 
@@ -384,7 +397,7 @@ p {
             border: none;
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
             justify-content: center;
             
             & a {
